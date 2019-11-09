@@ -31,5 +31,9 @@ module BeermachineApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # habilitando o autoload de todas as pastas em /app
+    config.autoload_paths += Dir["#{config.root}/services/**/"]
+    config.autoload_paths += %W(#{config.root}/app) # makes no difference whether I specify the file itself, or the whole app directory
   end
 end
