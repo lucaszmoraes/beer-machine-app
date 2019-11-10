@@ -1,25 +1,12 @@
-# README
+App construída em e Ruby 2.5.3, Rails 6 e Bootstrap 4.3 para consumo da Beer Machine API em https://github.com/lucaszmoraes/beer-machine-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Inicie em http://localhost:3000
 
-Things you may want to cover:
+- Nenhuma autenticação é necessária
 
-* Ruby version
+- Arquitetura e Desenho: Menu controller deve receber quaisquer métodos que pretendem retornar uma cerveja ao usuário
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# beer-machine-app
+- Features:
+  - Cálculo de melhor estilo de cerveja dada uma temperatura desejada de consumo através da consulta da API Beer Machine.
+  
+  
