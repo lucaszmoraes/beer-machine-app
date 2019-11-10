@@ -1,3 +1,10 @@
- 
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<div class="card" style="width: 36rem;">
+  <div class="card-body">
+    <h5 class="card-title">Melhor cerveja por temperatura</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Encontre a melhor cerveja para a sua temperatura preferida</h6>
+    <p class="card-text">Nos diga a sua temperatura preferida e nós calcularemos qual é a melhor
+      cerveja para você
+    </p>
+    <%= link_to "Desce uma!", menu_cerveja_por_temperatura_path,:class => "card-link" %>
+  </div>
+</div>
