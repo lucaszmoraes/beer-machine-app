@@ -4,10 +4,9 @@
     <h5 class="card-title">A melhor cerveja para a temperatur escolhida é:</h5>
     <br>
     <h3 class="card-title">
-      BREJA AQUI
+      <%= @best_beer %>
     </h3>
     <br>
-    <%= link_to "<< Calcular novamente", menu_cerveja_por_temperatura_path,:class => "card-link" %>
-
+    <%= link_to "<< Calcular novamente", menu_cerveja_por_temperatura_path, :class => "card-link" %>
   </div>
 </div>

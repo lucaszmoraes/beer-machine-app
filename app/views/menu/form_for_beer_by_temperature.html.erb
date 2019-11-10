@@ -3,22 +3,23 @@
   <div class="card-body">
     <h5 class="card-title">Melhor cerveja por temperatura</h5>
     <h6 class="card-subtitle mb-2 text-muted">Encontre a melhor cerveja para a sua temperatura preferida</h6>
-    
-    
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Selecione sua temperatura</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>-10</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-</form>
+
+    <b>Action Name:</b> <%= action_name %>
+
+    <%= form_with(url: menu_resultado_cerveja_por_temperatura_path, method: 'post', local: true) do |form| %>
 
 
-    <%= link_to "Calcular >>", menu_resultado_cerveja_por_temperatura_path,:class => "card-link" %>
+          <div class="form-group">
+            <%= label_tag :temperature, 'Entre com uma temperatura'%>
+            <%= text_field_tag :temperature, nil, placeholder: 'Ex.: -10', class: 'form-control' %>
+          </div>
+
+          <%= button_tag 'Calcular', class: 'btn btn-success btn-block' %>
+
+
+    <% end %>
+
+
+
   </div>
 </div>
