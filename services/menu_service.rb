@@ -9,17 +9,8 @@ class MenuService
     @given_temperature = given_temperature
   end
 
-  if false
-    def calculates_best_beer_by_temperature
-      # retorna o ID da melhor cerveja calculada
-      @best_beer = "SKOL"
-      return @best_beer
-    end
-  end
-
   def calculates_best_beer_by_temperature
-    #byebug
-
+    
     uri = URI.parse("http://localhost:2000/api/v1/beers/menu/melhor-cerveja")
     http = Net::HTTP.new(uri.host, uri.port)
     
@@ -28,13 +19,10 @@ class MenuService
     
     response = http.request(request)
     hash_response = YAML.load(response.body)
-    #render :json => response.body
-
-    # retorna o ID da melhor cerveja calculada
-    #@best_beer = "SKOL"
+    
     @best_beer = hash_response["style"]
-    #byebug
     return @best_beer
+
   end
 
 end
