@@ -4,22 +4,17 @@
     <h5 class="card-title">Melhor cerveja por temperatura</h5>
     <h6 class="card-subtitle mb-2 text-muted">Encontre a melhor cerveja para a sua temperatura preferida</h6>
 
-    <b>Action Name:</b> <%= action_name %>
-
     <%= form_with(url: menu_resultado_cerveja_por_temperatura_path, method: 'post', local: true) do |form| %>
-
-
-          <div class="form-group">
-            <%= label_tag :temperature, 'Entre com uma temperatura'%>
-            <%= text_field_tag :temperature, nil, placeholder: 'Ex.: -10', class: 'form-control' %>
+      <div class="form-group">
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Temperatura em °C:</div>
           </div>
-
-          <%= button_tag 'Calcular', class: 'btn btn-success btn-block' %>
-
-
+          <%= text_field_tag :temperature, nil, placeholder: 'Ex.: -2', class: 'form-control' %>
+        </div>
+      </div>
+      <%= button_tag 'Calcular', class: 'btn btn-success' %>
     <% end %>
-
-
 
   </div>
 </div>

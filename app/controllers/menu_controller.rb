@@ -9,8 +9,8 @@ class MenuController < ApplicationController
   end
 
   def result_of_beer_by_temperature
-    given_temperature = beer_by_temperature_params.to_i
-    @best_beer = MenuService.new(given_temperature).calculates_best_beer_by_temperature
+    @given_temperature = beer_by_temperature_params.to_i
+    @best_beer = MenuService.new(@given_temperature).calculates_best_beer_by_temperature
     #render json: @best_beer
   end
 

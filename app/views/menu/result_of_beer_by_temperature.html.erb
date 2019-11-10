@@ -1,12 +1,12 @@
 
 <div class="card" style="width: 36rem;">
   <div class="card-body">
-    <h5 class="card-title">A melhor cerveja para a temperatur escolhida é:</h5>
+    <h5 class="card-title">A melhor cerveja para a temperatura <%= @given_temperature %>°C é:</h5>
     <br>
     <h3 class="card-title">
       <%= @best_beer %>
     </h3>
     <br>
-    <%= link_to "<< Calcular novamente", menu_cerveja_por_temperatura_path, :class => "card-link" %>
+    <%= button_to "<<< Calcular novamente", menu_cerveja_por_temperatura_path,:class => "btn btn-info" %>
   </div>
 </div>

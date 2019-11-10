@@ -24,15 +24,16 @@ class MenuService
     http = Net::HTTP.new(uri.host, uri.port)
     
     request = Net::HTTP::Post.new(uri.request_uri)
-    request.set_form_data({"beer[temperature]" => given_temperature})
+    request.set_form_data({"beer[temperature]" => @given_temperature})
     
     response = http.request(request)
+    hash_response = YAML.load(response.body)
     #render :json => response.body
 
     # retorna o ID da melhor cerveja calculada
     #@best_beer = "SKOL"
-    @best_beer = response.body
-    byebug
+    @best_beer = hash_response["style"]
+    #byebug
     return @best_beer
   end
 
